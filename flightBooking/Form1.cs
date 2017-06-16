@@ -143,9 +143,9 @@ namespace flightBooking
             try
             {
                 string from = comboBox1.SelectedItem.ToString();
-                from.Replace(" ", "+");
+                from = from.Replace(" ", "+");
                 string to = comboBox3.SelectedItem.ToString();
-                to.Replace(" ", "+");
+                to = to.Replace(" ", "+");
                 StringBuilder direction = new StringBuilder();
                 direction.Append("http://maps.google.com/maps/dir/");
 
@@ -158,10 +158,23 @@ namespace flightBooking
                 {
                     direction.Append(to + "/");
                 }
-                //direction.Append("data=!3e4");
+                
               
                 webBrowser1.Navigate(direction.ToString());
+                //email.Text = direction.ToString();
+
+                //direction.Clear();
+                //direction.Append(webBrowser1.Url.ToString());
+                //email.Text = direction.ToString();
+                //direction.Length--;
+                //direction.Length--;
+                //direction.Length--;
+                //direction.Length--;
+                //direction.Append("!3e4");
+                //webBrowser1.Navigate(direction.ToString());
                 
+
+
             }
             catch (Exception ex)
             {
