@@ -1,0 +1,1 @@
+Data Source=localhost:1521/xe;User Id=hardihood;Password=oracle
