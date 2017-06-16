@@ -97,6 +97,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.mytab = new System.Windows.Forms.TabControl();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel_unauthorised.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_authorised.SuspendLayout();
@@ -108,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.search_panel.SuspendLayout();
             this.mytab.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_unauthorised
@@ -852,6 +855,23 @@
             this.mytab.TabStop = false;
             this.mytab.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.webBrowser1);
+            this.panel3.Location = new System.Drawing.Point(596, -1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(671, 599);
+            this.panel3.TabIndex = 8;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.Size = new System.Drawing.Size(671, 599);
+            this.webBrowser1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -859,7 +879,8 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 600);
+            this.ClientSize = new System.Drawing.Size(1267, 600);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.mytab);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_unauthorised);
@@ -885,6 +906,7 @@
             this.search_panel.ResumeLayout(false);
             this.search_panel.PerformLayout();
             this.mytab.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -959,6 +981,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn f_b_quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn f_b_pr;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

@@ -9,7 +9,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.Win32;
 
 namespace flightBooking
 {
@@ -104,8 +104,27 @@ namespace flightBooking
 
         }
 
+
+
+
         private void button3_Click(object sender, EventArgs e)
         {
+
+            int BrowserVer, RegVal;
+
+            // get the installed IE version
+            using (WebBrowser Wb = new WebBrowser())
+                BrowserVer = Wb.Version.Major;
+
+            // set the appropriate IE version
+            
+                RegVal = 11001;
+            
+
+            // set the actual key
+            RegistryKey Key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION", true);
+            Key.SetValue(System.Diagnostics.Process.GetCurrentProcess().ProcessName + ".exe", RegVal, RegistryValueKind.DWord);
+            Key.Close();
             dataGridView1.Rows.Clear();
             if (comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "")
             {
@@ -121,6 +140,33 @@ namespace flightBooking
             }
 
             
+            try
+            {
+                string from = comboBox1.SelectedItem.ToString();
+                from.Replace(" ", "+");
+                string to = comboBox3.SelectedItem.ToString();
+                to.Replace(" ", "+");
+                StringBuilder direction = new StringBuilder();
+                direction.Append("http://maps.google.com/maps/dir/");
+
+                if (from != string.Empty)
+                {
+                    direction.Append(from + "/");
+                }
+
+                if (to != string.Empty)
+                {
+                    direction.Append(to + "/");
+                }
+                //direction.Append("data=!3e4");
+              
+                webBrowser1.Navigate(direction.ToString());
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

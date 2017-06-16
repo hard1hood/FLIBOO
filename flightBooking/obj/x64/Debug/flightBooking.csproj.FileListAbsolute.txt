@@ -5,3 +5,10 @@ F:\OneDrive\projects\flightBooking\flightBooking\obj\x64\Debug\flightBooking.For
 F:\OneDrive\projects\flightBooking\flightBooking\obj\x64\Debug\flightBooking.Properties.Resources.resources
 F:\OneDrive\projects\flightBooking\flightBooking\obj\x64\Debug\flightBooking.Registration_Form.resources
 F:\OneDrive\projects\flightBooking\flightBooking\obj\x64\Debug\flightBooking.csproj.GenerateResource.Cache
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\x64\Debug\flightBooking.AcceptionForm.resources
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\x64\Debug\flightBooking.addFlightForm.resources
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\x64\Debug\flightBooking.bookingForm.resources
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\x64\Debug\flightBooking.Form1.resources
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\x64\Debug\flightBooking.Properties.Resources.resources
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\x64\Debug\flightBooking.Registration_Form.resources
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\x64\Debug\flightBooking.csproj.GenerateResource.Cache
