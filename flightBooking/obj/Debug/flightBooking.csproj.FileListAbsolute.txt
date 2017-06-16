@@ -38,3 +38,7 @@ F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\Debug\flightBooking.
 F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\Debug\flightBooking.csproj.GenerateResource.Cache
 F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\Debug\flightBooking.exe
 F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\obj\Debug\flightBooking.pdb
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\bin\Debug\Google.Maps.dll
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\bin\Debug\Newtonsoft.Json.dll
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\bin\Debug\Google.Maps.pdb
+F:\OneDrive\projects\flightBooking\FLIBOO\flightBooking\bin\Debug\Newtonsoft.Json.xml

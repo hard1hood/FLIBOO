@@ -37,6 +37,8 @@ namespace flightBooking
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            label2.Text = dateTimePicker1.Value.ToString();
             string dt, at, dtt, att;
             bool checkfln;
             if (!ch.CheckFlightNum(textBox5.Text)&& fNumber == "")
@@ -48,14 +50,28 @@ namespace flightBooking
             {
                 MessageBox.Show("The flight with that number already excists. Please, choose the other one!");
             }
-            else if (textBox5.Text.Length != 8 || textBox2.Text.Length < 1 || textBox1.Text.Length < 1 ||
-                textBox3.Text.Length < 1 || textBox4.Text.Length < 1 || !maskedTextBox1.MaskCompleted || !maskedTextBox2.MaskCompleted ||
-                !ch.TimeCheck(maskedTextBox1.Text, maskedTextBox2.Text, dateTimePicker1.Value, dateTimePicker2.Value)
-                || !ch.CheckIntValue(textBox1.Text) || !ch.CheckIntValue(textBox2.Text) || !ch.CheckIntValue(textBox3.Text)
+            else if (textBox5.Text.Length > 8 || textBox2.Text.Length < 1 || textBox1.Text.Length < 1 ||
+                textBox3.Text.Length < 1 || textBox4.Text.Length < 1 || !maskedTextBox1.MaskCompleted || !maskedTextBox2.MaskCompleted)
+
+            {
+
+                MessageBox.Show("Error with mask!");
+            }
+
+
+
+
+            else if (
+             !ch.TimeCheck(maskedTextBox1.Text, maskedTextBox2.Text, dateTimePicker1.Value, dateTimePicker2.Value))
+            {
+
+                MessageBox.Show("Error with date!");
+            }
+            else if (!ch.CheckIntValue(textBox1.Text) || !ch.CheckIntValue(textBox2.Text) || !ch.CheckIntValue(textBox3.Text)
                 || !ch.CheckIntValue(textBox4.Text))
             {
                 
-                MessageBox.Show("Error with date!");
+                MessageBox.Show("Error with seats!");
             }
             else
             {
@@ -317,6 +333,11 @@ namespace flightBooking
 
             }
             
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
         }
 

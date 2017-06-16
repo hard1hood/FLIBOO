@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.flightsedit = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.acc_label = new System.Windows.Forms.Label();
@@ -96,7 +97,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.mytab = new System.Windows.Forms.TabControl();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel_unauthorised.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_authorised.SuspendLayout();
@@ -199,6 +199,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 40);
             this.panel2.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(464, 10);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "departure";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // flightsedit
             // 
@@ -657,7 +668,8 @@
             this.price});
             this.dataGridView1.Location = new System.Drawing.Point(-4, 112);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(600, 242);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(603, 242);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.Visible = false;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
@@ -667,42 +679,49 @@
             // 
             this.flight_num.HeaderText = "flight number";
             this.flight_num.Name = "flight_num";
+            this.flight_num.ReadOnly = true;
             this.flight_num.Width = 50;
             // 
             // flight_company
             // 
             this.flight_company.HeaderText = "airlines";
             this.flight_company.Name = "flight_company";
+            this.flight_company.ReadOnly = true;
             this.flight_company.Width = 50;
             // 
             // flight_departure
             // 
             this.flight_departure.HeaderText = "departure";
             this.flight_departure.Name = "flight_departure";
+            this.flight_departure.ReadOnly = true;
             this.flight_departure.Width = 125;
             // 
             // flight_departure_time
             // 
             this.flight_departure_time.HeaderText = "departure time";
             this.flight_departure_time.Name = "flight_departure_time";
+            this.flight_departure_time.ReadOnly = true;
             this.flight_departure_time.Width = 80;
             // 
             // flight_arrival
             // 
             this.flight_arrival.HeaderText = "arrival";
             this.flight_arrival.Name = "flight_arrival";
+            this.flight_arrival.ReadOnly = true;
             this.flight_arrival.Width = 125;
             // 
             // flight_arrival_time
             // 
             this.flight_arrival_time.HeaderText = "arrival time";
             this.flight_arrival_time.Name = "flight_arrival_time";
+            this.flight_arrival_time.ReadOnly = true;
             this.flight_arrival_time.Width = 80;
             // 
             // price
             // 
             this.price.HeaderText = "price,$";
             this.price.Name = "price";
+            this.price.ReadOnly = true;
             this.price.Width = 50;
             // 
             // search_panel
@@ -725,6 +744,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(441, 32);
             this.comboBox2.Name = "comboBox2";
@@ -756,6 +776,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(159, 32);
             this.comboBox3.Name = "comboBox3";
@@ -785,6 +806,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(15, 32);
             this.comboBox1.Name = "comboBox1";
@@ -829,16 +851,6 @@
             this.mytab.TabIndex = 7;
             this.mytab.TabStop = false;
             this.mytab.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(464, 10);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "departure";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
